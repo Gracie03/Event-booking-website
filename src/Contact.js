@@ -9,7 +9,7 @@ const Contact = () => {
      scale:1.2,
       transition:{
         repeatType:'mirror',
-       repeat:Infinity,duration:0.8ss, ease:'easeOut'
+       repeat:Infinity,duration:0.8, ease:'easeOut'
       }
     }  
   }

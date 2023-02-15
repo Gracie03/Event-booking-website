@@ -36,6 +36,7 @@ html{
     font-weight: 1000;
     font-style: italic;
     font-family: cursive;
+    padding-top: 5px;
 
 }
 
@@ -137,7 +138,7 @@ li, .btn,.icon, .card{
 
 .italic{
     font-style: italic;
-    color: #FB048C;
+    color: var(--clr-clr1);
    
 }
 
@@ -165,6 +166,7 @@ li, .btn,.icon, .card{
     background-color: var(--clr-clr2);
     border-radius: 4px;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .home{

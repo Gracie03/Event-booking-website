@@ -1,88 +1,53 @@
 import React from 'react';
-import { FaPhone,FaInstagram, FaEnvelope,FaAngleRight, FaMapMarkerAlt} from "react-icons/fa";
+import { FaAngleRight} from "react-icons/fa";
 import {motion} from 'framer-motion';
+import { useState,useEffect } from 'react';
 
 const Contact = () => {
+ 
+  const [error,seterror] = useState('error setting');
+  const [name,setname] = useState('');
+  const [email,setemail] = useState('');
+  const [message,setmessage] = useState('');
 
-  const bounce = {
-    bouncer:{
-     scale:1.2,
-      transition:{
-        repeatType:'mirror',
-       repeat:Infinity,duration:0.8, ease:'easeOut'
-      }
-    }  
+  const handlechange = ()=>{
+
   }
 
- 
+  const handleclick = ()=>{
+
+  }
+  
+
 
   return (
     <div id='contact' className='section contact'>
        <div className='head'>
-       <div className='arrow'><FaAngleRight/></div><h3 className='head title'>Get in touch with us</h3>
+       <div className='arrow'><FaAngleRight/></div><h3 className='head '>Get in touch with us</h3>
         </div>
       <div className='contact-container'>
         <div className='form'>
+
+        <span className='error'>{error}</span>
+
           <form>
             <div className='name'>
-              <label>Name</label>
-              <input className='input'/>
+              <label>Name</label> 
+              <input className='input' placeholder='Enter Name'  name='name' value={name} onChange={handlechange} />
             </div>
-           <div className='email'>
+           <div className='email' >
               <label>Email</label>
-              <input className='input'/>
+              <input className='input' placeholder='example@email.com' name='email' value={email} onChange={handlechange}/>
             </div>
-            <div className='message-label'>
+            <div className='message-label' >
               <label>Message</label>
-              <textarea className='message'></textarea>
+              <textarea className='message' placeholder='enter message'  name='email' value={message} onChange={handlechange}></textarea>
             </div>
             <button className='btn submit'>Send Message</button>
           </form>
         </div>
 
-        <div className='icon-container'>
-
-         <div className='socials'>
-          <motion.div
-          variants={bounce} 
-          animate='bouncer'
-           className='icon'>
-            <FaEnvelope/>
-           </motion.div>
-           Email
-         </div>
-
-         <div className='socials'>
-          <motion.div
-         variants={bounce} 
-         animate='bouncer'
-           className='icon'>
-            <FaPhone/>
-           </motion.div>
-           000000000
-         </div>
-
-         <div className='socials'>
-          <motion.div
-         variants={bounce} 
-         animate='bouncer'
-           className='icon'>
-            <FaInstagram/>
-           </motion.div>
-            Instagram
-         </div>     
-
-         <div className='socials'>
-          <motion.div
-         variants={bounce} 
-         animate='bouncer'
-           className='icon'>
-            <FaMapMarkerAlt/>
-           </motion.div>
-           Address
-         </div> 
-          
-        </div>
+       
       </div>
     </div>
   )

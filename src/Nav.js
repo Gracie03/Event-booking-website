@@ -7,6 +7,15 @@ import {motion} from 'framer-motion';
 const Nav = () => {
 
     const [showlinks,setshowlinks] = useState(false);
+    const [fixed,setfixed] = useState(false);
+
+  window.addEventListener('scroll',()=>{
+    if (window.scrollY>=80){
+      setfixed(true)
+    }else{
+      setfixed(false)
+    }
+  })
 
     const links = {
         start:{
@@ -27,7 +36,7 @@ const Nav = () => {
     
 
   return (
-  <nav>
+  <nav  className={`${fixed?'fixed' : 'nav'}`}>
   
     <div className='logo'>E&V</div>
     <motion.button

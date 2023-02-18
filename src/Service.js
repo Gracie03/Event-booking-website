@@ -7,7 +7,7 @@ const Service = () => {
 
   const buttons = {
     start:{
-    scale:1.2,
+    scale:1.1,
     transition:{ ease:'easeIn', duration:0.2,
      }
     },

@@ -1,14 +1,33 @@
 import React from 'react';
 import {  FaAngleRight } from "react-icons/fa";
 import img2 from './image/img2.jpg';
+import {motion} from 'framer-motion';
+
 
 const About = () => {
+
+  const entry = {
+    start:{
+      x:'-200vw', opacity:0
+    },
+    stop:{
+      x: ['-200vw','0'], opacity:1,
+      transition:{ ease:'easeIn', duration:0.8, delay:0.2, type:'spring', stiffness:200,
+    }
+    },
+   }
+  
+
   return (
    <>
     <div id='about' className='section about'>
-    <div className='head abt'>
-         <div className='arrow'><FaAngleRight/></div><h3 className='head title'>All About us</h3>
-        </div>
+    <motion.div
+     variants={entry}
+     initial=''
+     animate =''
+    className='head abt'>
+         <div className='arrow'><FaAngleRight/></div><h3 className='head '>All About us</h3>
+    </motion.div>
       <div className='about-container'>
         <div className='photo ab'><img src={img2} alt='home' className='img'/></div>
        <div className='article'>

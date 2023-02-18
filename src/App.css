@@ -53,16 +53,16 @@ p{
 
 .small{
     font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.1px;
-    color: var(--clr-clr2);
-    font-weight: 650;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    color: var(--clr-clrp1);
+    font-weight: 500;
 }
 
 .gig{
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    line-height: 32px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 50px;
     color: var(--clr-clr2);
 }
 
@@ -115,9 +115,7 @@ nav{padding-bottom: 10px;
     flex-direction: column;
     justify-content: space-between;
     justify-content: center;
-    background: linear-gradient(90deg, #2cd9ff, #7effb2 );
-    background-size: 100% 100%;
-    animation: changes 2.5s infinite ease-in-out;
+    background-color: var(--clr-clr5);
 }
 
 ul{
@@ -136,18 +134,16 @@ li, .btn,.icon, .card{
     cursor: pointer;
 }
 
-.italic{
-    font-style: italic;
-    color: var(--clr-clr1);
-   
-}
+
 
 
 
 .fixed{
+    width: 100%;
     top: 0px;
     overflow: hidden;
     position: fixed;
+    background-color: var(--clr-clr5);
 }
 
 .nav-toggle{
@@ -175,7 +171,7 @@ li, .btn,.icon, .card{
     align-items: center;
     justify-content: center;
     background: linear-gradient(90deg, #2cd9ff, #7effb2 );
-    background-size: 400% 400%;
+    background-size: 100% 100%;
     animation: changes 2.5s infinite ease-in-out;
 }
 
@@ -191,7 +187,7 @@ li, .btn,.icon, .card{
     text-align: left;
     align-items: left;
     padding-left: 12px;
-    gap: 8px;
+    gap: 12px;
 }
 
 .head{
@@ -206,7 +202,7 @@ li, .btn,.icon, .card{
         background-position: 100% 50%;
     }
     100%{
-        background-position: o 50%;
+        background-position: 0 50%;
     }
 }
 
@@ -345,36 +341,25 @@ li, .btn,.icon, .card{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 10px;
-    justify-content: space-around;
+    gap: 8px;
     margin-top: 20px;
 }
 
-.socials{
+.footer-container{
     display: flex;
-    flex-direction: row;
-    gap: 4px;
-    font-weight: 500;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.footer{
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 800;
-    color: var(--clr-clr2);
-    background-color: var(--clr-clr4);
+    gap: 8px;
+    height: 80px;
 }
 
 .input{
   width: 350px;
-  height: 30px;
+  height: 40px;
   border-radius: 4px;
   border: 0px;
+  padding: 5px;
   
 }
 
@@ -383,6 +368,7 @@ li, .btn,.icon, .card{
     height: 100px;
     border-radius: 4px;
     border: 0px;
+    padding: 5px;
    
 }
 
@@ -393,27 +379,26 @@ li, .btn,.icon, .card{
     margin-top: 8px;
     color: #000033;
     font-weight: 600;
+    gap: 4px;
 }
 
 .submit{
     width: 350px;
     margin-top: 10px;
-    height: 35px;
+    height: 40px;
 }
 
 .icon{
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--clr-clr1);
 }
 
-.arrow{
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    color: var(--clr-clr2);
+.error{
+    color: red;
 }
+
 
 @media screen and (min-width: 800px){
 
@@ -427,15 +412,16 @@ li, .btn,.icon, .card{
     }
 
     .gig{
-        font-size: 20px;
-        letter-spacing: 0.5px;
-        line-height: 45px;
+        font-size: 28px;
+        letter-spacing: 1.5px;
+        line-height: 60px;
     }
 
     .small{
         font-size: 14px;
         line-height: 18px;
         letter-spacing: 0.2px;
+        width: 500px;
     }
 
    
@@ -491,7 +477,7 @@ li, .btn,.icon, .card{
         text-align: left;
         align-items: left;
         padding-left: 20px;
-        gap: 12px;
+        gap: 8px;
     }
 
     .ab{
@@ -562,32 +548,30 @@ li, .btn,.icon, .card{
     }
 
     .form{
-        width: 80%;
-        align-items: flex-start;  
+        align-items: center;  
     }
 
     .icon-container{
-        width: 20%;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 40px;
-        
+        width: 50%;
+        flex-direction: row;
+        gap: 8px;
     }
 
     .icon{
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .input{
-        width: 500px;
-        height: 40px;
+        width: 600px;
+        height: 50px;
         background-color: var(--clr-clr4);
+        padding: 10px;
       }
       
       .message{
-          width: 500px;
-          height: 100px;
+          width: 600px;
+          height: 120px;
+          padding: 10px;
       }
       
       .name,.email,.message-label{
@@ -595,7 +579,7 @@ li, .btn,.icon, .card{
           flex-direction: column;
           text-align: left;
           margin-top: 8px;
-          gap: 4px;
+          gap: 8px;
       }
 
       .socials{
@@ -605,18 +589,28 @@ li, .btn,.icon, .card{
     }
 
     .submit{
-        width: 500px;
+        width: 600px;
         margin-top: 10px;
-        height: 40px;
+        height: 50px;
         font-weight: 580;
         font-size: 15px;
-        
     }
 
     .footer{  
-        height: 60px;
         font-size: 16px;
-        font-weight: 800;
+        font-weight: 600;
+    }
+
+    .footer-container{
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        gap: 8px;
+        height: 60px;
+    }
+
+    .arrow{
+        font-size: 20px;
     }
    
     

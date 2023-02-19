@@ -1,8 +1,6 @@
 import React from 'react';
 import img1 from './image/img3.jpg';
 import {motion} from 'framer-motion';
-import {useState} from 'react';
-
 
 const Home = () => {
 

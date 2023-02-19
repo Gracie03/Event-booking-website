@@ -1,21 +1,38 @@
 import React from 'react';
 import { FaAngleRight} from "react-icons/fa";
 import {motion} from 'framer-motion';
-import { useState,useEffect } from 'react';
+import { useState,useEffect} from 'react';
 
 const Contact = () => {
+
  
-  const [error,seterror] = useState('error setting');
+  const [error,seterror] = useState('');
   const [name,setname] = useState('');
   const [email,setemail] = useState('');
   const [message,setmessage] = useState('');
 
-  const handlechange = ()=>{
+  useEffect(()=>{
+    setTimeout((e)=>{
+     seterror('')
+    },5000)
+   },[error])
 
-  }
+  const handleclick = (e)=>{
+    setname('');
+    setemail('');
+    setmessage('');
 
-  const handleclick = ()=>{
+    if(name === ''){
+      seterror('please enter name')
+    }
+    
 
+
+
+   
+
+    e.preventDefault();
+   console.log(`hello`);
   }
   
 
@@ -30,20 +47,20 @@ const Contact = () => {
 
         <span className='error'>{error}</span>
 
-          <form>
+          <form  onSubmit={handleclick} >
             <div className='name'>
               <label>Name</label> 
-              <input className='input' placeholder='Enter Name'  name='name' value={name} onChange={handlechange} />
+              <input className='input' type='name' placeholder='Enter name '  name='name' value={name} onChange={(e)=>{setname(e.target.value)}} />
             </div>
            <div className='email' >
               <label>Email</label>
-              <input className='input' placeholder='example@email.com' name='email' value={email} onChange={handlechange}/>
+              <input className='input' type='email' placeholder='example@email.com' name='email' value={email} onChange={(e)=>{setemail(e.target.value)}}/>
             </div>
             <div className='message-label' >
               <label>Message</label>
-              <textarea className='message' placeholder='enter message'  name='email' value={message} onChange={handlechange}></textarea>
+              <textarea className='message' type='message' placeholder='enter message'  name='email' value={message} onChange={(e)=>{setmessage(e.target.value)}}></textarea>
             </div>
-            <button className='btn submit'>Send Message</button>
+            <button type='submit' value='submit' className='btn submit'>Send Message</button>
           </form>
         </div>
 

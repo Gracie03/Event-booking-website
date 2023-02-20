@@ -145,6 +145,7 @@ li, .btn,.icon, .card{
     position: fixed;
     z-index: 1;
     background-color: var(--clr-clr5);
+    transition: 1s ease-out;
 }
 
 .nav-toggle{
@@ -155,6 +156,7 @@ li, .btn,.icon, .card{
     flex-direction: column;
     align-items: center;
     align-content: center;
+    border: none;
     font-size: 17px;
     justify-content: center;
     width: 50px;

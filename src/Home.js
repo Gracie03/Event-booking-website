@@ -12,40 +12,14 @@ const Home = () => {
       }
   }
 
-  const entry = {
-    start:{
-      x:'200vw', opacity:0
-    },
-    stop:{
-      x: '0', opacity:1,
-      transition:{ ease:'easeIn', duration:0.8, delay:0.5, type:'spring', stiffness:300,
-    }
-    },
-   }
 
-   const fade = {
-    start:{
-       opacity:0
-    },
-    stop:{
-       opacity:1,
-      transition:{ ease:'easeIn', duration:2, delay:0.5, type:'spring', stiffness:300,
-    }
-    },
-   }
 
   return (
 
     <div id='home' className='section home'>
     <div className='home-container'>
-      <motion.div
-      variants={fade}
-      initial='start'
-      animate='stop' className='photo hp'><img src={img1} alt='home' className='img'/></motion.div>
-      <motion.div
-      variants={entry}
-      initial='start'
-      animate='stop' className='home-article'>
+      <div className='photo hp'><img src={img1} alt='home' className='img'/></div>
+      <div className='home-article'>
       <div className='gig'>
         <h1 className=''>We Bring</h1>
         <h1 className='pink'>The Aura & Vibes </h1>
@@ -59,7 +33,7 @@ const Home = () => {
         whileHover='start'
         className='btn'>Book Now</motion.button>
         </a>
-      </motion.div>    
+      </div>    
     </div>  
   </div>
   )
